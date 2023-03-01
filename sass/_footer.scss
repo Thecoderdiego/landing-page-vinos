@@ -25,7 +25,13 @@
     &__payment {
         @include mixins.dflex(flex, center, center);
         gap: .5rem;
-        padding: 0 1rem;
+        padding: 0 1rem 2rem;
+
+        @media screen and (max-width: 650px) {
+            @include mixins.dflex(flex, center, center);
+            flex-direction: column;
+        }
+
     }
 
     &__title {
@@ -33,5 +39,6 @@
         font-weight: 400;
         letter-spacing: 1px;
         line-height: 1.4rem;
+        text-align: center;
     }
 }

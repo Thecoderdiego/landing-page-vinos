@@ -235,13 +235,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 40vh;
   margin: 0 auto;
   max-width: 1400px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 1rem 0;
 }
 .suscribe__subtitle {
   letter-spacing: 1px;
@@ -249,6 +249,7 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
+  margin-bottom: 0;
 }
 .suscribe__title {
   font-family: "Playfair Display", serif;
@@ -257,6 +258,7 @@
   font-size: 2.5rem;
   padding-bottom: 0;
   text-align: center;
+  margin-bottom: 0;
 }
 .suscribe__description {
   font-family: "Playfair Display", serif;
@@ -298,13 +300,22 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem;
+}
+@media screen and (max-width: 650px) {
+  .footer__payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 .footer__title {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.4rem;
+  text-align: center;
 }
 
 html {
