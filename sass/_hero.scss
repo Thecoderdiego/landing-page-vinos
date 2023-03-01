@@ -1,0 +1,36 @@
+@use 'fonts';
+@use 'mixins';
+
+.hero {
+    max-width: 1400px;
+    margin: 0 auto;
+    
+    &__image {
+        height: auto;
+        max-width: 100%;
+    }
+
+    &__article {
+        position: relative;
+        @include mixins.dflex(flex, center, end);
+    }
+
+    &__content {
+        position: absolute;
+        width: 50%;
+    }
+
+    &__title {
+        font-family: fonts.$font-primary;
+        font-size: 4.5vw;
+        font-style: italic;
+        font-weight: 400;
+        margin-bottom: 0; 
+    }
+
+    &__description {
+        font-family: fonts.$font-primary;
+        font-size: 2.3vw;
+        width: 70%;
+    }
+}

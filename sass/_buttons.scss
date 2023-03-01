@@ -1,0 +1,31 @@
+@use 'colors';
+@use 'mixins';
+
+.btn {
+    @include mixins.button($color: colors.$title-color,
+        $border-color: colors.$primary-color );
+
+    &__icon {
+        max-width: 25%;
+
+        &--white {
+            fill: colors.$text-white;
+        }
+    }
+
+    &:hover {
+        background-color: colors.$primary-color;
+        background-size: 100%;
+        transition-duration: .4s;
+    }
+
+    &--hero {
+        color: colors.$text-white;
+
+        &:hover {
+            color: colors.$title-color;
+        }
+        
+    }
+}
+

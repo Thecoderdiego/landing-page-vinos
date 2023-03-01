@@ -1,0 +1,18 @@
+@use 'buttons';
+@use 'header';
+@use 'hero';
+@use 'products';
+@use 'suscribe';
+@use 'footer';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}

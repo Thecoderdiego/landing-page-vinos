@@ -1,0 +1,37 @@
+@use 'fonts';
+@use 'colors';
+@use 'mixins';
+
+
+.footer{
+    margin: 0 auto;
+    max-width: 1400px;
+    @include mixins.dflex(flex, center, space-around);
+
+    @media screen and (max-width: 992px) {
+        @include mixins.dflex(flex, center, center);
+        flex-direction: column;
+    }
+
+    &__copy {
+        font-family: fonts.$font-primary;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 1.4rem;
+        // padding: 0 .2rem;
+        text-align: center;
+    }
+
+    &__payment {
+        @include mixins.dflex(flex, center, center);
+        gap: .5rem;
+        padding: 0 1rem;
+    }
+
+    &__title {
+        font-family: fonts.$font-primary;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 1.4rem;
+    }
+}

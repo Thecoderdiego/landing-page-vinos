@@ -1,0 +1,91 @@
+@use 'colors';
+@use 'fonts';
+@use 'mixins';
+
+.main {
+    margin: 0 auto;
+    max-width: 1400px;
+    @include mixins.dflex(flex,center,center);
+    flex-direction: column;
+    padding-bottom: 4rem;
+}
+
+.product {
+    padding-top: 1rem;
+    @include mixins.dflex(flex,center,center);
+    flex-direction: column;
+
+    &__subtitle {
+        letter-spacing: 1px;
+        color: colors.$primary-color;
+        font-size: .8rem;
+        text-transform: uppercase;
+        font-family: fonts.$font-primary;
+        margin-bottom: 0;
+    }
+
+    &__title {
+        font-family: fonts.$font-primary;
+        font-weight: 400;
+        font-style: italic;
+        margin: .5rem 0;
+        font-size: 2.5rem;
+    }
+
+    &__description {
+        font-family: fonts.$font-primary;
+        font-weight: 400;
+        color: colors.$text-color;
+        letter-spacing: 1px;
+        line-height: 1.4rem;
+        padding: 0 .2rem;
+        text-align: center;
+    }
+
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+.product-wine {
+
+    text-align: center;
+    cursor: pointer;
+    &__image {
+        max-width: 80%;
+    }
+
+    &__category {
+        letter-spacing: 1px;
+        color: colors.$primary-color;
+        font-size: .8rem;
+        text-transform: uppercase;
+        font-family: fonts.$font-primary;
+    }
+
+    &__name {
+        font-family: fonts.$font-primary;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1rem;
+        padding-bottom: 0;
+    }
+
+    &__price {
+        font-family: fonts.$font-primary;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+   &__btn {
+    margin-top: 1rem;
+   }
+}
+
+

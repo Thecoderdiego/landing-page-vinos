@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  padding: 1vw 3vw;
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  background: linear-gradient(#c96838 0 0) no-repeat;
+  background-color: transparent;
+  border: 1px solid #c96838;
+  background-size: 2%;
+  transition-duration: 0.4s;
+}
+.btn__icon {
+  max-width: 25%;
+}
+.btn__icon--white {
+  fill: #fff;
+}
+.btn:hover {
+  background-color: #c96838;
+  background-size: 100%;
+  transition-duration: 0.4s;
+}
+.btn--hero {
+  color: #fff;
+}
+.btn--hero:hover {
+  color: #000;
+}
+
+.header-mobile {
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 992px) {
+  .header-mobile {
+    display: none;
+  }
+}
+
+.panel-btn {
+  cursor: pointer;
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100vh;
+  transform: translate(-100%, 0);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+.panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+.panel__links {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.panel__links--enlace {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  padding: 20px 15px;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  color: #000;
+}
+.panel__links--enlace:hover {
+  color: #c96838;
+}
+
+.panel.is-active {
+  transform: translate(0, 0);
+}
+
+.header-desktop {
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 992px) {
+  .header-desktop {
+    display: none;
+  }
+}
+.header-desktop__logo {
+  padding-bottom: 3rem;
+}
+.header-desktop__nav--enlace {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  padding: 0px 50px;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 2px;
+}
+.header-desktop__nav--enlace:hover {
+  color: #c96838;
+}
+
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.hero__image {
+  height: auto;
+  max-width: 100%;
+}
+.hero__article {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.hero__content {
+  position: absolute;
+  width: 50%;
+}
+.hero__title {
+  font-family: "Playfair Display", serif;
+  font-size: 4.5vw;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.hero__description {
+  font-family: "Playfair Display", serif;
+  font-size: 2.3vw;
+  width: 70%;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+
+.product {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.product__subtitle {
+  letter-spacing: 1px;
+  color: #c96838;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0;
+}
+.product__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0.5rem 0;
+  font-size: 2.5rem;
+}
+.product__description {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #666;
+  letter-spacing: 1px;
+  line-height: 1.4rem;
+  padding: 0 0.2rem;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (min-width: 992px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.product-wine {
+  text-align: center;
+  cursor: pointer;
+}
+.product-wine__image {
+  max-width: 80%;
+}
+.product-wine__category {
+  letter-spacing: 1px;
+  color: #c96838;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+}
+.product-wine__name {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
+  padding-bottom: 0;
+}
+.product-wine__price {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.product-wine__btn {
+  margin-top: 1rem;
+}
+
+.suscribe {
+  background-image: url("/assets/section-suscribe.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.suscribe__subtitle {
+  letter-spacing: 1px;
+  color: #c96838;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+}
+.suscribe__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2.5rem;
+  padding-bottom: 0;
+  text-align: center;
+}
+.suscribe__description {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #666;
+  letter-spacing: 1px;
+  line-height: 1.4rem;
+  padding: 0 0.2rem;
+  text-align: center;
+}
+.suscribe__btn {
+  margin-top: 1rem;
+}
+
+.footer {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (max-width: 992px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.footer__copy {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.4rem;
+  text-align: center;
+}
+.footer__payment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+.footer__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
